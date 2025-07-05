@@ -35,6 +35,14 @@
         opacity: 1;
         transform: translateY(0);
     }
+
+  
+
+    .btn-custom:focus {
+        outline: none;
+        box-shadow: 0 0 0 0.2rem rgba(198, 156, 109, 0.5);
+    }
+
   </style>
 </head>
 <body>
@@ -65,13 +73,11 @@
 <section class="py-5 bg-light" id="menu">
   <div class="container">
     <h2 class="text-center mb-4">Order from Our Menu</h2>
+    <h3 class="text-center mb-4">Collection and Payment in Person</h3>
     <div class="row" id="menuItems">
       <!-- Items rendered by JS -->
     </div>
-    <div class="text-center mt-4">
-      <button class="btn btn-custom text-white" data-bs-toggle="modal" data-bs-target="#cartModal">View Cart</button>
-    </div>
-  </div>
+  
 </section>
 
 <!-- Cart Modal -->
@@ -208,6 +214,17 @@ function submitOrder() {
 
 renderMenu();
 </script>
+
+<!-- Floating View Cart Button -->
+<button
+  class="btn btn-custom text-white position-fixed shadow"
+  style="bottom: 20px; right: 20px; z-index: 1090;"
+  data-bs-toggle="modal"
+  data-bs-target="#cartModal"
+>
+  🛒 View Cart
+</button>
+
 </body>
 </html>
 
